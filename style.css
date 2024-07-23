@@ -231,3 +231,9 @@ li {
     align-items: center;
   }
 }
+
+@media ((max-width: 450px)) {
+  .link-gmail .link-style-contacto .name-gmail {
+    display: none;
+  }
+}
