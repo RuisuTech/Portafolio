@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css"
+    />
+    <link rel="shortcut icon" href="img/Icon.webp" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
     <title>Jose Luis Guzman</title>
   </head>
   <body>
     <header class="header">
-      <p class="logo">Ruisu Tech</p>
+      <p class="logo">Portafolio</p>
       <ul class="links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Trabajos</a></li>
-        <li><a href="#">Sobre mi</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="sobre-mi.html">Sobre mi</a></li>
       </ul>
-      <a class="link-style" href="#">Contactame</a>
     </header>
 
     <main class="main">
@@ -25,49 +30,100 @@
           Programador autodidacta, experto en convertir errores en
           oportunidades... Para aprender algo nuevo :D
         </p>
-        <div class="links-contacto">
-            <div class="link-style-contacto">
-              <a class="link-style-icon" href="#"><img src="img/Linkedin.webp" alt="Linkedin"></a>
-            </div>
-            <div class="link-style-contacto">
-              <a class="link-style-icon" href="#"><img src="img/Github.webp" alt="GitHub"></a>
-            </div>
-            <div class="link-style-contacto">
-              <a class="link-style-icon" href="#"><img src="img/Gmail.webp" alt="Gmail"></a>
-            </div>
+        <div class="link-gmail">
+          <div class="link-style-contacto" onclick="copyToClipboard()">
+            <a class="link-style-icon" href="#"
+              ><img src="img/Gmail.webp" alt="Gmail"
+            /></a>
+            <p>JoseLuisOsorioGuzman11@gmail.com</p>
+            <p class="copy-button">Copiar</p>
           </div>
+        </div>
+        <div class="links-contacto">
+          <div class="link-style-contacto">
+            <a
+              class="link-style-icon"
+              href="https://www.linkedin.com/in/jose-luis-guzman-178702267/"
+              ><img src="img/Linkedin.webp" alt="Linkedin"
+            /></a>
+          </div>
+          <div class="link-style-contacto">
+            <a class="link-style-icon" href="https://github.com/RuisuTech"
+              ><img src="img/Github.webp" alt="GitHub"
+            /></a>
+          </div>
+          <div class="link-style-contacto">
+            <a class="link-style-icon" href="#"
+              ><img src="img/CV.webp" alt="Gmail"
+            /></a>
+          </div>
+        </div>
       </section>
 
       <section class="section-2">
         <h1 class="titulo-principal">Proyectos</h1>
         <div class="proyectos">
           <div class="container-proyecto">
-            <img src="img/PixelYelanLite.png" alt="Proyecto" />
-            <h2>Name</h2>
-            <p>Descripcion</p>
+            <div class="container-img">
+              <a href="#"><img src="img/PixelYelanLite.png" alt="Proyecto" /></a>
+            </div>
+            <div class="detalles-proyecto">
+              <div>
+                <h2>Name</h2>
+                <p>Descripcion</p>
+                <p>Tecnologias</p>
+              </div>
+              <div class="link-style-contacto">
+                <a class="link-style-icon" href="https://github.com/RuisuTech"
+                  ><img src="img/Github.webp" alt="GitHub"
+                /></a>
+              </div>
+            </div>
           </div>
 
           <div class="container-proyecto">
-            <img src="img/PixelYelanLite.png" alt="Proyecto" />
-            <h2>Name</h2>
-            <p>Descripcion</p>
+            <div class="container-img">
+              <a href="#"><img src="img/PixelYelanLite.png" alt="Proyecto" /></a>
+            </div>
+            <div class="detalles-proyecto">
+              <div>
+                <h2>Name</h2>
+                <p>Descripcion</p>
+                <p>Tecnologias</p>
+              </div>
+              <div class="link-style-contacto">
+                <a class="link-style-icon" href="https://github.com/RuisuTech"
+                  ><img src="img/Github.webp" alt="GitHub"
+                /></a>
+              </div>
+            </div>
           </div>
           <div class="container-proyecto">
-            <img src="img/PixelYelanLite.png" alt="Proyecto" />
-            <h2>Name</h2>
-            <p>Descripcion</p>
+            <div class="container-img">
+              <a href="#"><img src="img/PixelYelanLite.png" alt="Proyecto" /></a>
+            </div>
+            <div class="detalles-proyecto">
+              <div>
+                <h2>Name</h2>
+                <p>Descripcion</p>
+                <p>Tecnologias</p>
+              </div>
+              <div class="link-style-contacto">
+                <a class="link-style-icon" href="https://github.com/RuisuTech"
+                  ><img src="img/Github.webp" alt="GitHub"
+                /></a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section-3">
         <h1>Sobre mi</h1>
-        <p>Simplemente el mejor, ¿ Que esperas para contactarme ?</p>
         <p>
           Soy una persona apasionada por la programación y estoy decidido a
           aprender de manera autodidacta y convertirme en un desarrollador de
           software competente.
         </p>
-        <a class="link-style" href="#">Contactame</a>
       </section>
     </main>
 
@@ -75,19 +131,51 @@
       <h1>Contactame</h1>
 
       <div class="links-contacto">
-        <div class="link-style-contacto">
-          <a class="link-style-icon" href="#"><img src="img/Linkedin.webp" alt="Linkedin"></a>
-          <p class="footer-link-text">Jose Luis Guzman</p>
+        <div class="icons">
+          <div class="link-style-contacto">
+            <a
+              class="link-style-icon"
+              href="https://www.linkedin.com/in/jose-luis-guzman-178702267/"
+              ><img src="img/Linkedin.webp" alt="Linkedin"
+            /></a>
+          </div>
+          <div class="link-style-contacto">
+            <a class="link-style-icon" href="https://github.com/RuisuTech"
+              ><img src="img/Github.webp" alt="GitHub"
+            /></a>
+          </div>
+          <div class="link-style-contacto">
+            <a class="link-style-icon" href="#"
+              ><img src="img/CV.webp" alt="Gmail"
+            /></a>
+          </div>
         </div>
-        <div class="link-style-contacto">
-          <a class="link-style-icon" href="#"><img src="img/Github.webp" alt="GitHub"></a>
-          <p class="footer-link-text">Jose Luis Guzman</p>
-        </div>
-        <div class="link-style-contacto">
-          <a class="link-style-icon" href="#"><img src="img/Gmail.webp" alt="Gmail"></a>
-          <p class="footer-link-text">Jose Luis Guzman</p>
+        <div class="link-gmail">
+          <div class="link-style-contacto" onclick="copyToClipboard()">
+            <a class="link-style-icon" href="#"
+              ><img src="img/Gmail.webp" alt="Gmail"
+            /></a>
+            <p>JoseLuisOsorioGuzman11@gmail.com</p>
+            <p class="copy-button">Copiar</p>
+          </div>
         </div>
       </div>
     </footer>
+    <script>
+      function copyToClipboard() {
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = "JoseLuisOsorioGuzman11@gmail.com";
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        Swal.fire({
+          title: "Gmail",
+          text: "En el portapapeles",
+          icon: "success",
+          iconColor: "gray",
+        });
+      }
+    </script>
   </body>
 </html>

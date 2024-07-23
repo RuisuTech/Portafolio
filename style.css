@@ -26,13 +26,8 @@ li {
   margin: 10px 0;
 }
 
-.links {
-  display: flex;
-  gap: 1em;
-}
-
 .link-style {
-  background-color: #111;
+  background-color: #000000;
   border: #000000;
   border-radius: 10px;
   padding: 0.5em 1em;
@@ -40,10 +35,11 @@ li {
 }
 
 .link-style-icon {
-  background-color: #111;
+  background-color: #000000;
   border: #000000;
   border-radius: 50%;
   padding: 0.5em 1em;
+  transition: 0.3s;
 }
 
 .link-style-contacto {
@@ -59,10 +55,12 @@ li {
   width: 30px;
   height: 30px;
   padding: 10px;
+  
 }
 
 .link-style-contacto a img {
   width: 100%;
+  transition: 0.3s;
 }
 
 /* Header */
@@ -73,6 +71,16 @@ li {
   align-items: center;
   flex-wrap: wrap;
   padding: 2em;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+}
+
+.links a {
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* Main */
@@ -112,12 +120,26 @@ li {
   border-radius: 10px;
   padding: 10px;
   width: 300px;
+  overflow: hidden;
+}
+
+.container-img {
+  overflow: hidden;
+  border-radius: 10px
 }
 
 .container-proyecto img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: 0.3s;
+  object-fit: cover;
+}
+
+.detalles-proyecto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-3 {
@@ -137,13 +159,51 @@ li {
 }
 
 .footer .links-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer .links-contacto .icons {
+  display: flex;
+  gap: 1em;
 }
 
 .footer-link-text {
+  border: #ffffff;
   margin-bottom: 5px;
+}
+
+.link-gmail .link-style-contacto {
+  background-color: #000000;
+  border: #000000;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.link-gmail .link-style-icon {
+  background-color: transparent;
+}
+.copy-button {
+  color: #ffffff;
+  border: #000000;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+/* Hover & Focus */
+.link-gmail .link-style-contacto:hover,
+.link-style-icon:hover,
+.link-gmail .link-style-contacto:focus,
+.link-style-icon:focus, 
+.links a:hover,
+.links a:focus {
+  background-color: #1b1b1b;
+}
+
+.container-proyecto img:hover, .link-style-contacto img:hover {
+  transform: scale(1.1);
 }
 
 /* Responsive */
@@ -152,14 +212,22 @@ li {
   body {
     padding: 0 10vw;
   }
+
+  .container-proyecto {
+    width: 600px;
+  }
 }
 
 @media (max-width: 1249px) {
-  .header .link-style {
-    display: none;
-  }
-
   .section-1 .links-contacto {
     justify-content: center;
+  }
+
+  .footer {
+    align-items: center;
+  }
+
+  .footer .links-contacto {
+    align-items: center;
   }
 }
